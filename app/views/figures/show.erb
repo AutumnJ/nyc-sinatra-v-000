@@ -1,0 +1,14 @@
+<h1>Below are the details for the figure you selected:</h1>
+
+<strong>Name:</strong>
+<p><%= @figure.name %></p>
+<strong>Titles:</strong>
+<% @figure.titles.each.with_index(1) do |title, index| %>
+	<p><%= index %>. <%=title.name %></p>
+
+<% end %>
+<strong>Landmarks:</strong>
+<% @figure.landmarks.each.with_index(1) do |landmark, index| %>
+	<p><%= index %>. <%=landmark.name %></p>
+
+<% end %>
